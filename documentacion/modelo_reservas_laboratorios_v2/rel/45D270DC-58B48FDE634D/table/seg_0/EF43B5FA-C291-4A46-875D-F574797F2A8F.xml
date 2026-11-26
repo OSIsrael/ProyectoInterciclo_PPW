@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF43B5FA-C291-4A46-875D-F574797F2A8F" name="GRL_BLOQUEOS">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>C5B8ADC3-5D98-95C4-D9FA-DB60637AC5EB</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="blo_codigo" id="651B40D0-9131-4F92-6E04-DBAAECA3A6F9">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>2764C91C-8636-41D7-15AF-7DD687E5BD86</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="blo_tipo" id="68017D70-85BC-1C62-159B-82A722664A21">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[C para CLASES FIJAS
+M para MANTENIMIENTOS
+F  para FERIADOS]]></commentInRDBMS>
+<generatorID>AF16498A-5FB9-4936-4C57-5F307ABAFAF0</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="blo_motivo" id="565EAE27-166C-9693-5534-EF3578FAE428">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripcion de porq existe el bloqueo]]></commentInRDBMS>
+<generatorID>3BD6738F-3580-9536-ABD0-B91922DE6C02</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="blo_inicio" id="B7F58430-DF89-39D2-A853-A64F7DFB31F8">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora desde la que se bloquea.]]></commentInRDBMS>
+<generatorID>C210CE13-B348-A0DF-C9F0-A016BC47DFCF</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="blo_fin" id="136C8776-941D-9E76-9918-30B72B66A869">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora en que termina el bloqueo]]></commentInRDBMS>
+<generatorID>98D6225E-BA91-1AA6-D107-BE6BE87E87C6</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lab_codigo" id="C0347663-D30B-6734-E825-BE8842010F11">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>78FB3A3D-A0C4-5CEE-34E7-003565C1AD88</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="388E06DE-D2B7-9063-FD3C-6B0883BE0739" referredColumn="171DDD93-EEA3-7A8A-04F0-97985D0FB100"/>
+</associations>
+</Column>
+<Column name="usu_codigo" id="D3A6828F-080D-9568-AE5F-2D0C56AF2707">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[id del usuario administrador encargado]]></commentInRDBMS>
+<generatorID>8E564D21-B12A-F557-5541-A4F177959439</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35BDAE36-0867-B4E6-F67B-F18BCF8A1C85" referredColumn="19300BFB-B3AD-FEE8-8E43-134A9D70DDA0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="51E0C30B-72A0-97F4-D0F3-D42855176055" name="GRL_BLOQUEOS_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>887E6D09-76D8-6CA9-D41B-880C4378AD32</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="651B40D0-9131-4F92-6E04-DBAAECA3A6F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72150695-925E-AC35-AA1C-CF4B4AEAC282" name="lab_bloq">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>B0FDDCB5-4AF7-D26F-17F7-9292262ED3E2</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0347663-D30B-6734-E825-BE8842010F11"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3FB6B2AA-A50D-DD72-7463-083B8C91549A" name="usu_bloq">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>A34A46F1-7744-53EC-96F5-6F4ACEBE827D</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D3A6828F-080D-9568-AE5F-2D0C56AF2707"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

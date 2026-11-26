@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="equ_res" directorySegmentName="seg_0" id="B106D4D5-3802-9864-A527-92B9B98C7305">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-26 00:09:41 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<sourcePk>7A4FAA1A-4BFA-5F18-FA66-1678F461074C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0197E520-6F2D-4E79-62C0-E5FE30110D06</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E6A433D4-6FAB-D454-DE80-A36F8E1EAA2A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

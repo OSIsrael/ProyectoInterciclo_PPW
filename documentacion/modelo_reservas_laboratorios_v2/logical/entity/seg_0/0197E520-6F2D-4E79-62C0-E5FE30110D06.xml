@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0197E520-6F2D-4E79-62C0-E5FE30110D06" name="GRL_EQUIPOS">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:20:20 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="equ_codigo" id="A40F4675-69D9-1BC6-FC3B-F228BC3B4AAE">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:20:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cada equipo pertenece a un laboratorio]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="equ_codigo_inventario" id="3A820BDA-29BD-8C89-0A7D-6EA0016623D7">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:21:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Código visible del equipo, por ejemplo RED-PC-03]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="equ_tipo" id="8BCE1360-93F6-A6F1-B0CE-C9F1CEA93AD2">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:22:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Computadora, proyector, routers, etc.]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="equ_estado" id="76AB64BF-EC23-601A-E8BA-7F65AA9DB0AE">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:24:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[O para OPERATIVO
+D para DAÑADO
+R para EN_REPARACION
+]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lab_codigo" id="E42C8335-2FEC-49E8-C27D-6893F7F06380">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-23 13:17:53 UTC</createdTime>
+<generatorID>0F52D67D-0A92-CEA9-4C08-8C5F40F03B7E</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<referedAttribute>95EB0B90-7384-0D50-0D32-61BCCDB13ED7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7A4FAA1A-4BFA-5F18-FA66-1678F461074C" name="GRL_EQUIPOS PK">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:20:39 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A40F4675-69D9-1BC6-FC3B-F228BC3B4AAE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

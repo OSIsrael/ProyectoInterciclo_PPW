@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="62018ABB-5603-C712-3E5A-D3A3D09AA7D6" name="GRL_EQUIPOS">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>0197E520-6F2D-4E79-62C0-E5FE30110D06</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="equ_codigo" id="F43D0657-6420-BC1B-EE23-F26C2099716D">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cada equipo pertenece a un laboratorio]]></commentInRDBMS>
+<generatorID>A40F4675-69D9-1BC6-FC3B-F228BC3B4AAE</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="equ_codigo_inventario" id="88BE78E0-CB34-6830-51E4-DC783C49AFAF">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Código visible del equipo, por ejemplo RED-PC-03]]></commentInRDBMS>
+<generatorID>3A820BDA-29BD-8C89-0A7D-6EA0016623D7</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="equ_tipo" id="F788A634-511A-B935-7783-DF23A8C49DBD">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Computadora, proyector, routers, etc.]]></commentInRDBMS>
+<generatorID>8BCE1360-93F6-A6F1-B0CE-C9F1CEA93AD2</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="equ_estado" id="4FF49C41-2393-6371-DFC1-ECE9ABCA9A74">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[O para OPERATIVO
+D para DAÑADO
+R para EN_REPARACION
+]]></commentInRDBMS>
+<generatorID>76AB64BF-EC23-601A-E8BA-7F65AA9DB0AE</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lab_codigo" id="E32CBE3F-6504-47A8-E786-9825E391618B">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>E42C8335-2FEC-49E8-C27D-6893F7F06380</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="859DB0D7-5DFC-229F-D02C-2655FB04665E" referredColumn="171DDD93-EEA3-7A8A-04F0-97985D0FB100"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1FF80602-3E54-2AB2-A1F2-DBDEAF2785B2" name="GRL_EQUIPOS_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>7A4FAA1A-4BFA-5F18-FA66-1678F461074C</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F43D0657-6420-BC1B-EE23-F26C2099716D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F199E8F9-BB71-7724-20CD-CAA032D80D34" name="lab_equi">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>0F52D67D-0A92-CEA9-4C08-8C5F40F03B7E</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E32CBE3F-6504-47A8-E786-9825E391618B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

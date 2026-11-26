@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="859DB0D7-5DFC-229F-D02C-2655FB04665E" containerWithKeyObject="62018ABB-5603-C712-3E5A-D3A3D09AA7D6" localFKIndex="F199E8F9-BB71-7724-20CD-CAA032D80D34" name="lab_equi">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>0F52D67D-0A92-CEA9-4C08-8C5F40F03B7E</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<referredTableLongName>GRL_LABORATORIOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FA0CA6CA-BDE8-9993-C461-A1A207E06C1B</referredTableID>
+<keyObject>73B2B567-96CA-1B90-37F3-D50C925452EE</keyObject>
+<referredKeyID>73B2B567-96CA-1B90-37F3-D50C925452EE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>lab_codigo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

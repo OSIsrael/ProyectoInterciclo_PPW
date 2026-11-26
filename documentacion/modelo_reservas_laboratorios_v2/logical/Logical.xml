@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="9C4A6459-6E3C-AD13-9AC8-56FB3823354D" mainViewID="708BBBDC-D074-CADC-A76B-FB72299058B3">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:40:41 UTC</createdTime>
+<ownerDesignName>gestion_reserva_laboratorios</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

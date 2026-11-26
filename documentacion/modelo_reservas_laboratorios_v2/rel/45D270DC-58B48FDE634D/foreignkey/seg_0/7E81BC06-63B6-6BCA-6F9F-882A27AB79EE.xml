@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7E81BC06-63B6-6BCA-6F9F-882A27AB79EE" containerWithKeyObject="30452552-C9EB-9B2F-66F2-9B58EC33CD4D" localFKIndex="CEC759C9-A995-BCC9-1276-F1C3F3DA464E" name="equi_inci">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>962A07A7-CC66-8A1E-CAB1-92992342405B</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<referredTableLongName>GRL_EQUIPOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>62018ABB-5603-C712-3E5A-D3A3D09AA7D6</referredTableID>
+<keyObject>1FF80602-3E54-2AB2-A1F2-DBDEAF2785B2</keyObject>
+<referredKeyID>1FF80602-3E54-2AB2-A1F2-DBDEAF2785B2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>equ_codigo</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
