@@ -9,7 +9,7 @@ const tablas = baseDatos.prepare(`
     ORDER BY name
 `).all();
 
-// Mostrar las tablas
+// Mostrar tablas
 console.table(tablas);
 
 // Mostrar la cantidad de tablas
