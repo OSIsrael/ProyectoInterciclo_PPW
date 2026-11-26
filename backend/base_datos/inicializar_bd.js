@@ -3,19 +3,14 @@ const archivos = require('node:fs');
 const ruta = require('node:path');
 
 try {
-    // Obtener la ruta del script SQL
     const rutaScript = ruta.join(__dirname, 'crear_tablas.sql');
 
-    // Leer el contenido del archivo SQL
     const scriptSQL = archivos.readFileSync(rutaScript, 'utf8');
 
-    // Iniciar una transacción
     baseDatos.exec('BEGIN TRANSACTION');
 
-    // Ejecutar el script de creación de tablas
     baseDatos.exec(scriptSQL);
 
-    // Confirmar los cambios
     baseDatos.exec('COMMIT');
 
     console.log('Base de datos inicializada correctamente');
@@ -32,6 +27,5 @@ try {
 
 } finally {
 
-    // Cerrar la conexión
     baseDatos.close();
 }

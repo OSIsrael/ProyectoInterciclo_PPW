@@ -1,18 +1,65 @@
-# Proyecto Integrador - Gestión de Reservas de Laboratorios
+## Inicialización de la base de datos
 
-## Descripción
-Aplicación web para gestionar reservas de laboratorios y equipos, con acceso diferenciado para administradores, docentes y estudiantes.
+El proyecto utiliza SQLite mediante el módulo
+node:sqlite integrado en Node.js.
 
-## Tecnologías
-- Frontend: Angular
-- Backend: Node.js y Express
-- Base de datos: SQLite
-- Arquitectura: Opción A - API REST
+### Instalar las dependencias del backend
 
-## Organización
-- Persona 1: Autenticación y administración.
-- Persona 2: Horarios y reservas.
-- Persona 3: Equipos, incidencias, notificaciones y reportes.
+```bash
+cd backend
+npm install
+cd ..
+```
 
-## Estado del proyecto
-En desarrollo.
+### Crear las tablas
+
+```bash
+node backend/base_datos/inicializar_bd.js
+```
+
+### Cargar los datos semilla
+
+```bash
+node backend/base_datos/datos_semilla.js
+```
+
+### Verificar la base de datos
+
+```bash
+node backend/base_datos/verificar_bd.js
+node backend/base_datos/probar_bd.js
+node backend/base_datos/verificar_semilla.js
+```
+
+## Usuarios de prueba
+
+| Usuario | Contraseña | Rol |
+|---|---|---|
+| admin | Admin123* | Administrador |
+| docente1 | Docente123* | Docente |
+| docente2 | Docente123* | Docente |
+| docente3 | Docente123* | Docente |
+| estudiante1 | Estudiante123* | Estudiante |
+| estudiante2 | Estudiante123* | Estudiante |
+| estudiante3 | Estudiante123* | Estudiante |
+| estudiante4 | Estudiante123* | Estudiante |
+| estudiante5 | Estudiante123* | Estudiante |
+
+Las contraseñas se almacenan mediante hashes generados
+con bcryptjs y un factor de costo de 10.
+
+Estas credenciales son exclusivamente para pruebas
+y desarrollo local.
+
+## Laboratorios de prueba
+
+| Laboratorio | Capacidad | Estado |
+|---|---|---|
+| Computacion 1 | 25 | Disponible |
+| Redes | 20 | Disponible |
+| Electronica | 15 | Mantenimiento |
+
+
+El script de datos semilla puede ejecutarse varias
+veces sin duplicar los registros, siempre que se
+mantengan sus identificadores de búsqueda.

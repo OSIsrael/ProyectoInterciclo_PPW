@@ -14,10 +14,9 @@ function probarRestriccion(nombre, consulta) {
 }
 
 try {
-    // Iniciar transacción para las pruebas
     baseDatos.exec('BEGIN TRANSACTION');
 
-    // Crear un usuario temporal
+    //usuario temporal
     baseDatos.exec(`
         INSERT INTO GRL_USUARIOS (
             usu_nombre, usu_apellido, usu_correo,
