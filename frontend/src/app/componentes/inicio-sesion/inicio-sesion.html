@@ -1,0 +1,67 @@
+<div class="contenedor-login">
+
+  <div class="tarjeta-login">
+
+    <div class="encabezado">
+      <h1>Bienvenido</h1>
+      <p>Gestión de Reservas de Laboratorios</p>
+    </div>
+
+    <form (ngSubmit)="iniciarSesion()">
+
+      <div class="campo">
+        <label for="usuario">Nombre de usuario</label>
+
+        <input
+          type="text"
+          id="usuario"
+          name="usuario"
+          [(ngModel)]="usuario"
+          placeholder="Ingrese su usuario"
+          autocomplete="username"
+          required
+        >
+      </div>
+
+      <div class="campo">
+        <label for="contrasena">Contraseña</label>
+
+        <input
+          type="password"
+          id="contrasena"
+          name="contrasena"
+          [(ngModel)]="contrasena"
+          placeholder="Ingrese su contraseña"
+          autocomplete="current-password"
+          required
+        >
+      </div>
+      @if (mensajeError()) {
+        <div class="mensaje-error" role="alert">
+          {{ mensajeError() }}
+        </div>
+      }
+
+      @if (mensajeExito()) {
+        <div class="mensaje-exito" role="status">
+          {{ mensajeExito() }}
+        </div>
+      }
+
+      <button
+        type="submit"
+        class="boton-ingresar"
+        [disabled]="cargando()"
+      >
+        {{ cargando() ? 'Ingresando...' : 'Iniciar sesión' }}
+      </button>
+
+    </form>
+
+    <div class="pie-pagina">
+      <p>Universidad Politécnica Salesiana</p>
+    </div>
+
+  </div>
+
+</div>
