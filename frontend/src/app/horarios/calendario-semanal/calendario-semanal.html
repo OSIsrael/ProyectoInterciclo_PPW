@@ -1,0 +1,63 @@
+<section class="contenedor">
+  <h2>Calendario Semanal de Disponibilidad por Laboratorio</h2>
+
+  <div class="controles">
+    <label>
+      Laboratorio:
+      <select [(ngModel)]="labSeleccionado" (change)="consultarCalendario()">
+        @for (lab of laboratorios; track lab.lab_codigo) {
+          <option [value]="lab.lab_codigo">{{ lab.lab_nombre }} ({{ lab.lab_estado === 'D' ? 'Disponible' : 'Mantenimiento' }})</option>
+        }
+      </select>
+    </label>
+
+    <label>
+      Semana de referencia:
+      <input type="date" [(ngModel)]="fechaReferencia" (change)="consultarCalendario()" />
+    </label>
+
+    <div class="nav-semana">
+      <button type="button" (click)="cambiarSemana(-7)">← Semana anterior</button>
+      <button type="button" (click)="cambiarSemana(7)">Semana siguiente →</button>
+    </div>
+  </div>
+
+  <div class="leyenda">
+    <span class="chip libre">Libre</span>
+    <span class="chip parcial">Parcial (puestos disponibles)</span>
+    <span class="chip reservada">Reservada completa</span>
+    <span class="chip bloqueada">Bloqueada / Mantenimiento</span>
+  </div>
+
+  @if (mensajeError) {
+    <div class="alerta error">{{ mensajeError }}</div>
+  }
+
+  @if (calendario) {
+    <p class="rango">
+      Mostrando <strong>{{ calendario.laboratorio.lab_nombre }}</strong> | Semana del
+      <strong>{{ calendario.semana_inicio }}</strong> al <strong>{{ calendario.semana_fin }}</strong>
+    </p>
+
+    <div class="grid-semana">
+      @for (dia of calendario.dias; track dia.fecha) {
+        <div class="columna-dia">
+          <header>
+            <strong>{{ dia.diaNombre }}</strong>
+            <span>{{ dia.fecha }}</span>
+          </header>
+
+          @for (franja of dia.franjas; track franja.hor_codigo) {
+            <div class="bloque-franja" [ngClass]="franja.estado_disponibilidad">
+              <div class="hora">{{ franja.hor_hora_inicio }} - {{ franja.hor_hora_fin }}</div>
+              <div class="estado">{{ franja.estado_disponibilidad | uppercase }}</div>
+              <small>{{ franja.detalle }}</small>
+            </div>
+          } @empty {
+            <p class="sin-franjas">Sin horario de atención</p>
+          }
+        </div>
+      }
+    </div>
+  }
+</section>

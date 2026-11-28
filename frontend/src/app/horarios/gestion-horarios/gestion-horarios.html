@@ -1,0 +1,171 @@
+<section class="contenedor">
+  <h2>Gestión de Horarios y Bloqueos (Administrador)</h2>
+
+  @if (mensajeExito) {
+    <div class="alerta exito">{{ mensajeExito }}</div>
+  }
+  @if (mensajeError) {
+    <div class="alerta error">{{ mensajeError }}</div>
+  }
+
+  <div class="grid-dos">
+    <!-- Formulario Franjas Horarias -->
+    <article class="tarjeta">
+      <h3>Nueva Franja Horaria de Atención</h3>
+      <form (ngSubmit)="guardarHorario()" class="formulario">
+        <label>
+          Laboratorio:
+          <select [(ngModel)]="nuevoHorario.lab_codigo" name="labHorario" required>
+            @for (lab of laboratorios; track lab.lab_codigo) {
+              <option [value]="lab.lab_codigo">{{ lab.lab_nombre }}</option>
+            }
+          </select>
+        </label>
+
+        <label>
+          Día de la semana:
+          <select [(ngModel)]="nuevoHorario.hor_dia_semana" name="diaSemana" required>
+            @for (dia of diasSemana; track dia) {
+              <option [value]="dia">{{ dia }}</option>
+            }
+          </select>
+        </label>
+
+        <div class="fila">
+          <label>
+            Hora inicio:
+            <input type="time" [(ngModel)]="nuevoHorario.hor_hora_inicio" name="horaInicio" required />
+          </label>
+          <label>
+            Hora fin:
+            <input type="time" [(ngModel)]="nuevoHorario.hor_hora_fin" name="horaFin" required />
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primario">Agregar Franja</button>
+      </form>
+    </article>
+
+    <!-- Formulario Bloqueos -->
+    <article class="tarjeta">
+      <h3>Registrar Bloqueo (Clase Fija / Mantenimiento / Feriado)</h3>
+      <form (ngSubmit)="guardarBloqueo()" class="formulario">
+        <label>
+          Laboratorio:
+          <select [(ngModel)]="bloqueoForm.lab_codigo" name="labBloqueo" required>
+            @for (lab of laboratorios; track lab.lab_codigo) {
+              <option [value]="lab.lab_codigo">{{ lab.lab_nombre }}</option>
+            }
+          </select>
+        </label>
+
+        <label>
+          Tipo de bloqueo:
+          <select [(ngModel)]="bloqueoForm.blo_tipo" name="tipoBloqueo" required>
+            <option value="clase_fija">Clase fija</option>
+            <option value="mantenimiento">Mantenimiento</option>
+            <option value="feriado">Feriado</option>
+          </select>
+        </label>
+
+        <label>
+          Motivo:
+          <input type="text" [(ngModel)]="bloqueoForm.blo_motivo" name="motivoBloqueo" placeholder="Ej. Mantenimiento preventivo" required />
+        </label>
+
+        <div class="fila">
+          <label>
+            Fecha:
+            <input type="date" [(ngModel)]="bloqueoForm.fecha" name="fechaBloqueo" required />
+          </label>
+          <label>
+            Inicio:
+            <input type="time" [(ngModel)]="bloqueoForm.horaInicio" name="inicioBloqueo" required />
+          </label>
+          <label>
+            Fin:
+            <input type="time" [(ngModel)]="bloqueoForm.horaFin" name="finBloqueo" required />
+          </label>
+        </div>
+
+        <button type="submit" class="btn-advertencia">Registrar Bloqueo</button>
+      </form>
+    </article>
+  </div>
+
+  <!-- Tabla de Bloqueos -->
+  <article class="tarjeta mt">
+    <h3>Bloqueos Programados</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Laboratorio</th>
+          <th>Tipo</th>
+          <th>Motivo</th>
+          <th>Inicio</th>
+          <th>Fin</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (b of bloqueos; track b.blo_codigo) {
+          <tr>
+            <td>{{ b.lab_nombre }}</td>
+            <td><span class="badge">{{ b.blo_tipo }}</span></td>
+            <td>{{ b.blo_motivo }}</td>
+            <td>{{ b.blo_inicio }}</td>
+            <td>{{ b.blo_fin }}</td>
+            <td>
+              <button type="button" class="btn-peligro" (click)="eliminarBloqueo(b.blo_codigo)">Eliminar</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr><td colspan="6">No hay bloqueos registrados.</td></tr>
+        }
+      </tbody>
+    </table>
+  </article>
+
+  <!-- Tabla de Franjas Horarias -->
+  <article class="tarjeta mt">
+    <div class="cabecera-tabla">
+      <h3>Franjas Horarias Configuradas</h3>
+      <select [(ngModel)]="filtroLabCodigo" (change)="cargarHorarios()">
+        <option [value]="0">Todos los laboratorios</option>
+        @for (lab of laboratorios; track lab.lab_codigo) {
+          <option [value]="lab.lab_codigo">{{ lab.lab_nombre }}</option>
+        }
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Laboratorio</th>
+          <th>Día</th>
+          <th>Horario</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (h of horarios; track h.hor_codigo) {
+          <tr>
+            <td>{{ h.hor_codigo }}</td>
+            <td>{{ h.lab_nombre || 'Lab #' + h.lab_codigo }}</td>
+            <td>{{ h.hor_dia_semana }}</td>
+            <td>{{ h.hor_hora_inicio }} - {{ h.hor_hora_fin }}</td>
+            <td>{{ h.hor_activo === 'S' ? 'Activo' : 'Inactivo' }}</td>
+            <td class="acciones">
+              <button type="button" class="btn-secundario" (click)="alternarEstadoHorario(h)">
+                {{ h.hor_activo === 'S' ? 'Desactivar' : 'Activar' }}
+              </button>
+              <button type="button" class="btn-peligro" (click)="eliminarHorario(h.hor_codigo)">Eliminar</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </article>
+</section>

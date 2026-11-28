@@ -1,0 +1,64 @@
+<section class="contenedor">
+  <h2>Reservar Puesto / Equipo Individual (Estudiante)</h2>
+  <p class="subtitulo">Si el equipo y la franja están disponibles, la reserva se confirma automáticamente.</p>
+
+  @if (mensajeExito) {
+    <div class="alerta exito">{{ mensajeExito }}</div>
+  }
+  @if (mensajeError) {
+    <div class="alerta error">{{ mensajeError }}</div>
+  }
+
+  <form (ngSubmit)="reservarEquipo()" class="tarjeta formulario">
+    <label>
+      Estudiante:
+      <select [(ngModel)]="form.usu_codigo" name="estudiante" required>
+        @for (e of estudiantes; track e.usu_codigo) {
+          <option [value]="e.usu_codigo">{{ e.usu_nombre }} {{ e.usu_apellido }} ({{ e.usu_username }})</option>
+        }
+      </select>
+    </label>
+
+    <label>
+      Laboratorio:
+      <select [(ngModel)]="form.lab_codigo" name="laboratorio" (change)="filtrarEquiposPorLab()" required>
+        @for (lab of laboratorios; track lab.lab_codigo) {
+          <option [value]="lab.lab_codigo">{{ lab.lab_nombre }} ({{ lab.lab_estado === 'D' ? 'Disponible' : 'Mantenimiento' }})</option>
+        }
+      </select>
+    </label>
+
+    <label>
+      Equipo operativo disponible:
+      <select [(ngModel)]="form.equ_codigo" name="equipo" required>
+        @for (eq of equiposFiltrados; track eq.equ_codigo) {
+          <option [value]="eq.equ_codigo">{{ eq.equ_codigo_inventario }} — {{ eq.equ_tipo }}</option>
+        } @empty {
+          <option [value]="0" disabled>No hay equipos operativos registrados en este laboratorio</option>
+        }
+      </select>
+    </label>
+
+    <div class="fila">
+      <label>
+        Fecha:
+        <input type="date" [(ngModel)]="form.fecha" name="fecha" required />
+      </label>
+      <label>
+        Hora inicio:
+        <input type="time" [(ngModel)]="form.horaInicio" name="horaInicio" required />
+      </label>
+      <label>
+        Hora fin:
+        <input type="time" [(ngModel)]="form.horaFin" name="horaFin" required />
+      </label>
+    </div>
+
+    <label>
+      Motivo de uso:
+      <input type="text" [(ngModel)]="form.res_motivo" name="motivo" placeholder="Ej. Desarrollo de proyecto integrador" />
+    </label>
+
+    <button type="submit" class="btn-primario">Confirmar Reserva de Equipo</button>
+  </form>
+</section>

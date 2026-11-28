@@ -6,9 +6,9 @@ require('dotenv').config({
     path: ruta.join(__dirname, '.env')
 });
 const baseDatos = require('./base_datos/conexion');
-const autenticacionRutas = require(
-    './rutas/autenticacion_rutas'
-);
+const autenticacionRutas = require('./rutas/autenticacion_rutas');
+const horariosRutas = require('./rutas/horariosRutas');
+const reservasRutas = require('./rutas/reservasRutas');
 
 //aplicacion express
 const aplicacion = express();
@@ -43,6 +43,10 @@ aplicacion.get('/api/base-datos', (solicitud, respuesta) => {
         version: resultado.version
     });
 });
+
+// Rutas Persona 2: Horarios, Bloqueos y Reservas
+aplicacion.use('/api', horariosRutas);
+aplicacion.use('/api', reservasRutas);
 
 // Iniciar
 aplicacion.listen(PUERTO, () => {
