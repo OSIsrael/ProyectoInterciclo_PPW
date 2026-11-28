@@ -3,6 +3,8 @@ const cors = require('cors');
 require('dotenv').config();
 
 const baseDatos = require('./base_datos/conexion');
+const horariosRutas = require('./rutas/horariosRutas');
+const reservasRutas = require('./rutas/reservasRutas');
 
 //aplicacion express
 const aplicacion = express();
@@ -34,6 +36,9 @@ aplicacion.get('/api/base-datos', (solicitud, respuesta) => {
         version: resultado.version
     });
 });
+// Rutas Persona 2: Horarios, Bloqueos y Reservas
+aplicacion.use('/api', horariosRutas);
+aplicacion.use('/api', reservasRutas);
 
 // Iniciar
 aplicacion.listen(PUERTO, () => {
