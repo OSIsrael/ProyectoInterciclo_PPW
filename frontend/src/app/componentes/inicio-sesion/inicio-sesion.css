@@ -1,0 +1,136 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.contenedor-login {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #3E0707;
+  background: linear-gradient(10deg,rgba(62, 7, 7, 1) 0%, rgba(150, 170, 242, 1) 100%);
+}
+
+.tarjeta-login {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.encabezado h1 {
+  color: #3e0707;
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.encabezado p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 8px;
+  color: #3e0707;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.campo input {
+  width: 100%;
+  padding: 13px;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  border-color: #846924;
+  box-shadow: 0 0 0 3px ;
+}
+
+
+.boton-ingresar {
+  width: 100%;
+  padding: 14px;
+  background-color: #3e0707;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.boton-ingresar:hover {
+  background-color: #750e0e;
+}
+
+.pie-pagina {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.pie-pagina p {
+  margin: 6px 0;
+}
+
+/* Adaptacion para dispositivos moviles */
+@media (max-width: 480px) {
+  .tarjeta-login {
+    padding: 25px;
+  }
+
+  .encabezado h1 {
+    font-size: 24px;
+  }
+}
+
+.mensaje-error {
+  color: #b91c1c;
+  background-color: #fee2e2;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  text-align: center;
+}
+/* Boton deshabilitado durante la peticion */
+.boton-ingresar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mensaje de inicio de sesion exitoso */
+.mensaje-exito {
+  background-color: #dcfce7;
+  color: #166534;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  text-align: center;
+}

@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A7BAA709-7B6D-32EC-9FB1-13128F304A44" name="GRL_NOTIFICACIONES">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>E33177C0-08D6-4917-6EF9-21F26F578C68</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="not_codigo" id="57E1C843-3D3E-8649-35AB-EE88AF12B2EF">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>F738C4BF-28F1-719A-C249-9CCFC0B993D3</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="not__tipo" id="8BD9D6C6-2B85-5514-2FC0-AEB69E7E00B6">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[N para NUEVA_SOLICITUD
+A para RESERVA_APROBADA
+R para RESERVA_RECHAZADA
+C para CAMBIO_EN_INCIDENCIA]]></commentInRDBMS>
+<generatorID>48A43C9B-225C-3804-3E4D-EDCCD7760BBF</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="not_titulo" id="F9473E55-2E4B-C1BC-980C-EED7CCA030AA">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Titulo de la incidencia]]></commentInRDBMS>
+<generatorID>AFFEC1EF-EE4A-FFFC-2C56-0EC8EB30A423</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="not_mensaje" id="4973C466-09B2-6DBF-C576-9B81C8F6B970">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Texto que vera el destinatario]]></commentInRDBMS>
+<generatorID>F8266A6E-F1E5-50B1-3FD6-306F93CC7B74</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="not_fecha_creacion" id="B081D87C-FC02-01E8-0123-99E6D79E65F1">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora de aviso]]></commentInRDBMS>
+<generatorID>2045F640-5BC8-7374-3D29-4B8E079DD0F3</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="not_leida" id="25AD3B5E-B6B3-EE97-C239-A780CED621D7">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Si la notificacion fue leida o no]]></commentInRDBMS>
+<generatorID>9374DC3C-633E-4C8C-8781-33E2793F4353</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usu_codigo" id="2E425920-6215-2461-2F03-4A46CAEA95C1">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>D4A230C3-B452-54DF-C1AD-AAD31565ABA1</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F0F8347F-8814-606C-E4FA-520583EB0D8D" referredColumn="19300BFB-B3AD-FEE8-8E43-134A9D70DDA0"/>
+</associations>
+</Column>
+<Column name="inc_codigo" id="26268DAE-805D-5443-A62A-C91DF4C8A565">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>BE648945-5762-0EBA-5258-B798AB64313C</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F395C65B-59FD-ED68-D210-63058C40736D" referredColumn="82F6B19A-8D9C-6514-F806-FFFFCCE28B08"/>
+</associations>
+</Column>
+<Column name="res_codigo" id="C9BA435A-212B-E20B-D208-2515C66EDF5B">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>A9DAEF78-3961-D77A-C608-7801D9D64D38</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FADE5BC2-3B30-ECBB-1689-F420042D8DC8" referredColumn="3EA83FCA-A5C0-1F06-7258-F0F55EE688FC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C270EA48-A3DF-10F8-F8DA-6BC6D44B68E4" name="GRL_NOTIFICACIONES_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>9F8EE959-487B-B084-6AC6-9F6FA5DFE234</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57E1C843-3D3E-8649-35AB-EE88AF12B2EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB132C07-F6E1-9602-0828-B0D13944EBAE" name="inci_not">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>42AF42C7-94C9-F870-972E-07EB09CD5F7B</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26268DAE-805D-5443-A62A-C91DF4C8A565"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F7A18BA-A129-F03B-616B-899BFA37DE06" name="res_not">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>8894EF7C-AC68-6075-374F-C1573F1E114E</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9BA435A-212B-E20B-D208-2515C66EDF5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71A32A9D-2DF3-CCD6-2A47-D55E20A724B4" name="usu_not">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>A5E2941D-8845-B66B-FED9-F860C6EDBB0C</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E425920-6215-2461-2F03-4A46CAEA95C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

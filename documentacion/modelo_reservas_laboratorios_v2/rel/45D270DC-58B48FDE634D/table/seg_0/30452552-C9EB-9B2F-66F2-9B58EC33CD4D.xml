@@ -1,0 +1,181 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="30452552-C9EB-9B2F-66F2-9B58EC33CD4D" name="GRL_INCIDENCIAS">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>EA59055B-E2CD-E449-1919-596A184D6BE7</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="inc_codigo" id="82F6B19A-8D9C-6514-F806-FFFFCCE28B08">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>D3554AD5-9367-D0C2-CB53-2638893A602C</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inc_descripcion" id="CDC23BF7-4E68-33F0-FF8C-43ABC796EC69">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>E7AEB993-D4F6-DBC0-5AA0-6847BE341489</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inc_prioridad" id="75ECE371-93B6-F614-52FB-3308B09A2B1A">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[B para Bajo
+M medio
+A alta]]></commentInRDBMS>
+<generatorID>F21A96EC-38BF-9CFC-D793-5659603DDEFA</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inc_estado" id="2BB79413-BF6B-751F-38D8-121B2534BD81">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[0 para ABIERTA
+1 para EN_REVISION
+2 para RESUELTA]]></commentInRDBMS>
+<generatorID>1BC42720-937F-15FB-479F-B85AACE49004</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inc_fecha_reporte" id="BA77BDED-355B-AFA6-0D9D-6FEB7A9A5E80">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>770C23A0-BD5B-EBDE-85C0-39C55328E124</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inc_comentario_admin" id="F79EEA93-ADE1-91A0-9770-D8985EE9729F">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Comentario del administrador segun su revision]]></commentInRDBMS>
+<generatorID>DF0EA472-EC27-570C-787F-12AD5654B992</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usu_codigo" id="9CB9FF8D-31CB-16B2-B665-BF023746E1CE">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[codigo del usuario que reporta la incidencia]]></commentInRDBMS>
+<generatorID>5B6F9F49-5DDE-C041-ED3B-9BB0D9D38A36</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="37252691-7CF6-858B-AFAE-6FEBD244AAD9" referredColumn="19300BFB-B3AD-FEE8-8E43-134A9D70DDA0"/>
+</associations>
+</Column>
+<Column name="equ_codigo" id="AA32E1FC-4645-3B42-0A2B-300B5D96108F">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[codifo del equipo dañado]]></commentInRDBMS>
+<generatorID>29DD8299-1390-BE8F-DEA2-C72D700337C7</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7E81BC06-63B6-6BCA-6F9F-882A27AB79EE" referredColumn="F43D0657-6420-BC1B-EE23-F26C2099716D"/>
+</associations>
+</Column>
+<Column name="usu_codigo1" id="31CC5DA8-5769-739F-0A39-C523573A3B41">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>CDB4E2F3-4B4C-07F0-6CF0-E11CA664A8E8</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B143F656-B569-DC27-DEE3-B4D657C5F832" referredColumn="19300BFB-B3AD-FEE8-8E43-134A9D70DDA0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7459F2BF-2ABA-E46D-D19C-B24211156171" name="GRL_INCIDENCIAS_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>0F08683E-CFBB-597C-0708-D2C17B848156</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82F6B19A-8D9C-6514-F806-FFFFCCE28B08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CEC759C9-A995-BCC9-1276-F1C3F3DA464E" name="equi_inci">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>962A07A7-CC66-8A1E-CAB1-92992342405B</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA32E1FC-4645-3B42-0A2B-300B5D96108F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F341085E-CB1A-F63E-84ED-8CF415986964" name="usu_admin_inci">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>15630EC7-2A42-8153-8A49-C857A2E66BDD</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31CC5DA8-5769-739F-0A39-C523573A3B41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35306901-94C6-5F12-3A93-7A29FDCC6655" name="usu_incidencias">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>5D3FB101-7983-7ACF-CD66-787C86E40E9D</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CB9FF8D-31CB-16B2-B665-BF023746E1CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

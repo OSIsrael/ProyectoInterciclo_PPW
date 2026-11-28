@@ -1,0 +1,26 @@
+.contenedor {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.tarjeta {
+  margin-top: 30px;
+  padding: 30px;
+  background-color: #f4f6f8;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+}
+
+.correcto {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+

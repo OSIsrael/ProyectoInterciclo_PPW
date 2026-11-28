@@ -1,0 +1,39 @@
+# Dependencias de Node.js
+node_modules/
+
+# Archivos generados por Angular
+dist/
+.angular/
+coverage/
+out-tsc/
+
+# Configuracion de IntelliJ IDEA
+.idea/
+*.iml
+
+# Configuracion de otros editores
+.vscode/
+
+# Variables de entorno y datos sensibles
+.env
+.env.*
+!.env.example
+
+# Bases de datos locales SQLite
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Archivos de registro
+*.log
+npm-debug.log*
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+/backend/node_modules/
+/backend/node_modules/
+/.idea/

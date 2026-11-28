@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B31E8508-15BE-9AFB-8D60-700B6902B84A" name="GRL_USUARIOS">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:48:26 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="usu_codigo" id="E8111CF4-AF88-F2E0-03DB-6F45FDB29FE7">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:49:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Correponde a la identificacion unica de cada usuario]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_nombre" id="5DBA4037-1A6D-B22D-D4BB-1CA9CDBDD1E3">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:50:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombres  completos del usuario]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_apellido" id="0FF37FB3-AA89-E57B-0683-4AC1290DC4E5">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 20:14:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Apellidos del usuario]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_correo" id="7FFAC4BE-6349-6600-B164-F17EBCA40E9F">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 20:15:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[Correo electronico del usuario]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_username" id="6D9619E8-E483-EE67-869A-CB5F8E763150">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:51:40 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_password_hash" id="F8D5EA59-7C42-299E-0B6F-D487B81B09AA">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:52:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contrasenia para el usuario.]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_rol" id="34E696B3-1EEA-5A57-8F29-E36DF7B0E088">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:53:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[A para ADMINOSTRADOR
+D para DOCENTE 
+E para ESTUDIANTE]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_estado" id="BC47E9EE-FF8C-6537-E96E-09FBA609D327">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 20:18:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[A para activo
+I para inactivo]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_fecha_creacion" id="EA9D15EE-151E-C91D-C036-3F08A55AEE22">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 20:16:39 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_codigo1" id="B4A6F754-366D-8611-E90B-6E86173CFB1A">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 20:00:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Los administradores gestionan los usuarios]]></commentInRDBMS>
+<generatorID>C878A83B-8A05-4ED4-491C-76FF68833AE7</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E8111CF4-AF88-F2E0-03DB-6F45FDB29FE7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DA429E82-8C74-BEE2-02EE-B320B2E12548" name="GRL_USUARIOS PK">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:49:41 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E8111CF4-AF88-F2E0-03DB-6F45FDB29FE7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

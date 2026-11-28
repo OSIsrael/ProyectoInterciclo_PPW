@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="10B58FC7-35C0-6D3F-D929-1D8C01A51A33" name="GRL_HORARIOS">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:25:49 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="hor_codigo" id="0568030F-800C-4483-C21A-0A2EE893A9E9">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:26:03 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hor_dia_semana" id="EAAA8601-6667-5CEB-BC8F-2F0FC1862F11">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:27:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[1 al 7 cada numero identifica cada dia de la semana.]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hor_hora_inicio" id="E0E6C8F7-510A-F442-0191-510AF0C2016E">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:28:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hora de inicio
+Formato HH:MM]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hor_hora_fin" id="B8037616-5DFE-4BB1-88A2-74F9891CCA58">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:30:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[Horario de cierre
+Formato HH:MM]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hor_activo" id="2E405F82-2D6D-AAC9-90DA-87567D1C528D">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 20:23:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[1 para activo 
+0 para inactivo]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lab_codigo" id="DD0DBE62-2278-F000-AB0A-BE5E829BEF20">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-23 13:19:48 UTC</createdTime>
+<generatorID>E8EFA782-BEB0-EFEF-3059-6F23E62DA7E6</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<referedAttribute>95EB0B90-7384-0D50-0D32-61BCCDB13ED7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C7C9822C-CF89-FF0D-9233-8CDE39A640FA" name="GRL_HORARIOS PK">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:27:00 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0568030F-800C-4483-C21A-0A2EE893A9E9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
