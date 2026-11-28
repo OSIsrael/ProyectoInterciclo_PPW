@@ -2,6 +2,11 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import {
+  Credenciales,
+  RespuestaAutenticacion
+} from '../modelos/autenticacion';
+
 // Estructura de la respuesta del servidor
 interface RespuestaBaseDatos {
   mensaje: string;
@@ -21,6 +26,17 @@ export class Api {
   comprobarConexion(): Observable<RespuestaBaseDatos> {
     return this.http.get<RespuestaBaseDatos>(
       `${this.urlApi}/base-datos`
+    );
+  }
+
+  // Enviar credenciales al backend
+  iniciarSesion(
+    credenciales: Credenciales
+  ): Observable<RespuestaAutenticacion> {
+
+    return this.http.post<RespuestaAutenticacion>(
+      `${this.urlApi}/autenticacion/login`,
+      credenciales
     );
   }
 }

@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E133BC6E-EB73-D3BB-0E64-22680A3E4EF7" name="GRL_HORARIOS">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>10B58FC7-35C0-6D3F-D929-1D8C01A51A33</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="hor_codigo" id="0FB0CF0C-7D81-3BFB-E91A-D945D6C82D9C">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>0568030F-800C-4483-C21A-0A2EE893A9E9</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hor_dia_semana" id="035D07B3-387F-5C6C-7D46-A92F269C8068">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[1 al 7 cada numero identifica cada dia de la semana.]]></commentInRDBMS>
+<generatorID>EAAA8601-6667-5CEB-BC8F-2F0FC1862F11</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hor_hora_inicio" id="8B7CE4EA-CC99-CEE3-60BB-F5729F5C260C">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hora de inicio
+Formato HH:MM]]></commentInRDBMS>
+<generatorID>E0E6C8F7-510A-F442-0191-510AF0C2016E</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hor_hora_fin" id="37BBA24B-0D38-1DE9-A918-9DC5B4860CFE">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Horario de cierre
+Formato HH:MM]]></commentInRDBMS>
+<generatorID>B8037616-5DFE-4BB1-88A2-74F9891CCA58</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hor_activo" id="00E05B69-6A3C-03CC-466D-6FA339B10C70">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[1 para activo 
+0 para inactivo]]></commentInRDBMS>
+<generatorID>2E405F82-2D6D-AAC9-90DA-87567D1C528D</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lab_codigo" id="0D425214-CB1C-4E70-1EE4-286D81317B10">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>DD0DBE62-2278-F000-AB0A-BE5E829BEF20</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0DF61ACA-1030-4F90-B51A-0421BD386C63" referredColumn="171DDD93-EEA3-7A8A-04F0-97985D0FB100"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="57C87796-218A-FBAA-5F37-0A05F03A244E" name="GRL_HORARIOS_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>C7C9822C-CF89-FF0D-9233-8CDE39A640FA</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0FB0CF0C-7D81-3BFB-E91A-D945D6C82D9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C3EF17E-7B51-D46C-1340-5FBCA209A4C7" name="lab_hor">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>E8EFA782-BEB0-EFEF-3059-6F23E62DA7E6</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D425214-CB1C-4E70-1EE4-286D81317B10"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

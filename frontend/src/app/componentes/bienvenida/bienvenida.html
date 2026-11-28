@@ -1,0 +1,59 @@
+@if (usuario) {
+
+  <div class="contenedor-bienvenida">
+
+    <header class="barra-superior">
+
+      <div class="titulo-sistema">
+        <h2>Gestión de Reservas de Laboratorios</h2>
+        <p>Universidad Politécnica Salesiana</p>
+      </div>
+
+      <button
+        class="boton-salir"
+        (click)="cerrarSesion()"
+      >
+        Cerrar sesión
+      </button>
+
+    </header>
+
+    <main class="contenido">
+
+      <div class="tarjeta-usuario">
+
+        <h1>Bienvenido, {{ usuario.usu_nombre }}</h1>
+
+        <p>Has iniciado sesión correctamente.</p>
+
+        <hr>
+
+        <div class="dato">
+          <strong>Nombre completo:</strong>
+          <span>
+                        {{ usuario.usu_nombre }}
+            {{ usuario.usu_apellido }}
+                    </span>
+        </div>
+
+        <div class="dato">
+          <strong>Nombre de usuario:</strong>
+          <span>{{ usuario.usu_username }}</span>
+        </div>
+
+        <div class="dato">
+          <strong>Rol:</strong>
+          <span>{{ obtenerRol() }}</span>
+        </div>
+
+        <div class="estado-sesion">
+          Sesión activa
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+}

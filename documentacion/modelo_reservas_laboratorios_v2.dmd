@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelo_reservas_laboratorios_v2" id="CCF9AD45-3A2D-2600-D02B-863B40C4F4E3" version="3.5">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 12:40:41 UTC</createdTime>
+<ownerDesignName>gestion_reserva_laboratorios</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CCF9AD45-3A2D-2600-D02B-863B40C4F4E3</designId>
+</OSDM_Design>

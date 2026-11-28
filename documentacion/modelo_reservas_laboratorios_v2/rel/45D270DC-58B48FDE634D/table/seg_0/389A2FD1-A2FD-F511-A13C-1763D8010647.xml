@@ -1,0 +1,261 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="389A2FD1-A2FD-F511-A13C-1763D8010647" name="GRL_RESERVAS">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>E6A433D4-6FAB-D454-DE80-A36F8E1EAA2A</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="res_codigo" id="3EA83FCA-A5C0-1F06-7258-F0F55EE688FC">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>2AFF9D41-6163-7E94-3065-F0AD7F4B978A</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="res_tipo" id="B8D857C1-BEC4-3DA2-17BD-96CC18DBBA9C">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[C   para LABORATORIO_COMPLETO
+P   para PUESTO/EQUIPO
+]]></commentInRDBMS>
+<generatorID>95BC27DD-10EC-D19B-022C-3598E91AD44D</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="res_fecha_hora_inicio" id="C25110AE-1F31-2288-B61B-48CF07D40913">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora de inicio]]></commentInRDBMS>
+<generatorID>4A9E8FE9-F965-78C2-3F86-3AB6B9F6BF62</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="res_fecha_hora_fin" id="16910485-1E5A-4FE3-4B4C-73CF50DD666E">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora de finalizacion]]></commentInRDBMS>
+<generatorID>90E320D6-8DA7-0C44-AF9D-E4AFC275DB06</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="res_asignatura" id="01AF6B03-620F-CEF7-36BB-F6420600BD72">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Obligatoria cuando un docente solicita el laboratorio completo.]]></commentInRDBMS>
+<generatorID>E52AD3DF-B833-DA32-28A4-E4AADA21EF9A</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="res_motivo" id="B5E459D4-CA9E-E929-9DBD-C6C451BC6026">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Obligatorio en la solicitud docente.]]></commentInRDBMS>
+<generatorID>8ADA62E4-184F-189A-6820-842411B96AD3</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="res_estado" id="F42CC095-5C90-2E17-7150-0BD6C2D7D716">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[P para PENDIENTE
+A para APROBADA
+R para RECHAZADA
+C para CANCELADA
+F para FINALIZADA]]></commentInRDBMS>
+<generatorID>FFDC38F4-F816-F6A5-528C-5653F2D7FEE8</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="res_mensaje_respuesta" id="69B919FB-EBAF-50DC-798C-FF890A6A725D">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[Mensaje del administrador, si apruaba o rechaza la solicitud]]></commentInRDBMS>
+<generatorID>F0D1CDD6-A13C-5842-8A5D-17B638C7CF81</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usu_codigo" id="5CBADE02-AFB9-03A2-5A8D-B9B85EC8EB94">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>82CE5760-1A19-89BB-F655-6E54DF2A2274</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4792917D-531E-8BA1-B40D-BA69A6474509" referredColumn="19300BFB-B3AD-FEE8-8E43-134A9D70DDA0"/>
+</associations>
+</Column>
+<Column name="lab_codigo" id="06522EFF-FA93-F574-774A-4C3244E1E51E">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>C8C8D1FA-F362-98BF-ED27-BF8F10A81A9D</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E3F20F02-656F-818C-64B9-30DECA224337" referredColumn="171DDD93-EEA3-7A8A-04F0-97985D0FB100"/>
+</associations>
+</Column>
+<Column name="usu_codigo1" id="19767475-7752-4796-EEEF-FBF29162C414">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>A301016A-A474-A9DB-3B0D-97251CA44A39</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="84B6EF2B-854A-FA61-8D20-DD67517B05FC" referredColumn="19300BFB-B3AD-FEE8-8E43-134A9D70DDA0"/>
+</associations>
+</Column>
+<Column name="hor_codigo" id="59CBADAD-5726-25E2-D300-81A764615294">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>ED86F440-A26B-9A3C-3C7E-5C5668525F8C</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AEC5CDFE-8DA3-6D85-1EEA-79B5375AB909" referredColumn="0FB0CF0C-7D81-3BFB-E91A-D945D6C82D9C"/>
+</associations>
+</Column>
+<Column name="equ_codigo" id="E38D9B8C-EB91-F63C-7CA9-FC8C61C0FEB9">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-26 00:23:24 UTC</createdTime>
+<generatorID>DA26A6FC-736F-9FDD-4A8A-40348B99742D</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F301967-43F3-3166-BB12-8627E419E591" referredColumn="F43D0657-6420-BC1B-EE23-F26C2099716D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="28BAF2B9-9AEA-BB83-95B1-CF7B9B510AD8" name="GRL_RESERVAS_PK">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>5B0B7942-DD94-B7A6-D131-48D04938051F</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EA83FCA-A5C0-1F06-7258-F0F55EE688FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0C90202-4E2D-5885-ABB7-BC1321EEEC96" name="hor_res">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>E544936C-C7D8-6800-8855-7514F1AFCB4A</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59CBADAD-5726-25E2-D300-81A764615294"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31320A5C-7E3B-3075-B388-A924B8CFBED8" name="lab_res">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>FA73E7B5-7F3A-95F5-2D79-1545BE9C9AB0</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06522EFF-FA93-F574-774A-4C3244E1E51E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="94ACD3B7-131C-5255-FA1C-5A167904DE8F" name="usu_res">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>D1A5ECC5-26EC-A244-0585-8DD2A0FCB8A4</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5CBADE02-AFB9-03A2-5A8D-B9B85EC8EB94"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9FCCBF5-E87F-4D93-A240-E21BC5E346FD" name="usu_res_admin">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-25 23:00:00 UTC</createdTime>
+<generatorID>E5F8D0B3-17FA-CE29-5BD5-DD4F6B3F1772</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19767475-7752-4796-EEEF-FBF29162C414"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="708430C2-6193-9125-A577-81D00DDA2053" name="equ_res">
+<createdBy>Usuario</createdBy>
+<createdTime>2026-11-26 00:23:24 UTC</createdTime>
+<generatorID>B106D4D5-3802-9864-A527-92B9B98C7305</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E38D9B8C-EB91-F63C-7CA9-FC8C61C0FEB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

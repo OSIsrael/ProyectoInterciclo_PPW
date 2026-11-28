@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E33177C0-08D6-4917-6EF9-21F26F578C68" name="GRL_NOTIFICACIONES">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:49:13 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="not_codigo" id="F738C4BF-28F1-719A-C249-9CCFC0B993D3">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:53:48 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="not _tipo" id="48A43C9B-225C-3804-3E4D-EDCCD7760BBF">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:54:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[N para NUEVA_SOLICITUD
+A para RESERVA_APROBADA
+R para RESERVA_RECHAZADA
+C para CAMBIO_EN_INCIDENCIA]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="not_titulo" id="AFFEC1EF-EE4A-FFFC-2C56-0EC8EB30A423">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 21:04:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Titulo de la incidencia]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="not_mensaje" id="F8266A6E-F1E5-50B1-3FD6-306F93CC7B74">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:56:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Texto que vera el destinatario]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="not_fecha_creacion" id="2045F640-5BC8-7374-3D29-4B8E079DD0F3">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:56:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha y hora de aviso]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="not_leida" id="9374DC3C-633E-4C8C-8781-33E2793F4353">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 21:05:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Si la notificacion fue leida o no]]></commentInRDBMS>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="usu_codigo" id="D4A230C3-B452-54DF-C1AD-AAD31565ABA1">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-23 13:46:55 UTC</createdTime>
+<generatorID>A5E2941D-8845-B66B-FED9-F860C6EDBB0C</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<referedAttribute>E8111CF4-AF88-F2E0-03DB-6F45FDB29FE7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="inc_codigo" id="BE648945-5762-0EBA-5258-B798AB64313C">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-23 13:51:22 UTC</createdTime>
+<generatorID>42AF42C7-94C9-F870-972E-07EB09CD5F7B</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>D3554AD5-9367-D0C2-CB53-2638893A602C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="res_codigo" id="A9DAEF78-3961-D77A-C608-7801D9D64D38">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-25 15:31:44 UTC</createdTime>
+<generatorID>8894EF7C-AC68-6075-374F-C1573F1E114E</generatorID>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>2AFF9D41-6163-7E94-3065-F0AD7F4B978A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9F8EE959-487B-B084-6AC6-9F6FA5DFE234" name="GRL_NOTIFICACIONES PK">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-19 13:54:21 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F738C4BF-28F1-719A-C249-9CCFC0B993D3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

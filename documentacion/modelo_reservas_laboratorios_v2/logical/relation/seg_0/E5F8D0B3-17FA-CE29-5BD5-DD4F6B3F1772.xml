@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="usu_res_admin" directorySegmentName="seg_0" id="E5F8D0B3-17FA-CE29-5BD5-DD4F6B3F1772">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-23 13:47:48 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<sourcePk>DA429E82-8C74-BEE2-02EE-B320B2E12548</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>aprobar/rechazar</nameOnSource>
+<nameOnTarget>gestionada</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B31E8508-15BE-9AFB-8D60-700B6902B84A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E6A433D4-6FAB-D454-DE80-A36F8E1EAA2A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

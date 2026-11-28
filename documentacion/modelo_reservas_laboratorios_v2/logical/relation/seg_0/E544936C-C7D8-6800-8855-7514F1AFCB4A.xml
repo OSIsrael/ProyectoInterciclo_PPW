@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="hor_res" directorySegmentName="seg_0" id="E544936C-C7D8-6800-8855-7514F1AFCB4A">
+<createdBy>victo</createdBy>
+<createdTime>2026-11-24 21:11:06 UTC</createdTime>
+<ownerDesignName>modelo_reservas_laboratorios_v2</ownerDesignName>
+<engineerTo>
+<item key="45D270DC-F7FD-7AA4-190B-58B48FDE634D" value="true"/>
+</engineerTo>
+<sourcePk>C7C9822C-CF89-FF0D-9233-8CDE39A640FA</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>tener</nameOnSource>
+<nameOnTarget>pertenecer</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>10B58FC7-35C0-6D3F-D929-1D8C01A51A33</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E6A433D4-6FAB-D454-DE80-A36F8E1EAA2A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
