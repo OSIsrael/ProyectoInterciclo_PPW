@@ -1,0 +1,62 @@
+<section class="contenedor">
+  <h2>Historial de Mis Reservas</h2>
+
+  <div class="filtro">
+    <label>
+      Consultar historial de usuario:
+      <select [(ngModel)]="usuarioSeleccionado" (change)="cargarHistorial()">
+        @for (u of usuarios; track u.usu_codigo) {
+          <option [value]="u.usu_codigo">{{ u.usu_nombre }} {{ u.usu_apellido }} (Rol: {{ u.usu_rol }})</option>
+        }
+      </select>
+    </label>
+  </div>
+
+  @if (mensajeExito) {
+    <div class="alerta exito">{{ mensajeExito }}</div>
+  }
+  @if (mensajeError) {
+    <div class="alerta error">{{ mensajeError }}</div>
+  }
+
+  <article class="tarjeta">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tipo</th>
+          <th>Laboratorio / Equipo</th>
+          <th>Inicio</th>
+          <th>Fin</th>
+          <th>Motivo / Asignatura</th>
+          <th>Estado</th>
+          <th>Mensaje Admin</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (r of reservas; track r.res_codigo) {
+          <tr>
+            <td>{{ r.res_codigo }}</td>
+            <td>{{ r.res_tipo === 'L' ? 'Laboratorio' : 'Equipo' }}</td>
+            <td>{{ r.lab_nombre }} {{ r.equ_codigo_inventario ? '(' + r.equ_codigo_inventario + ')' : '' }}</td>
+            <td>{{ r.res_fecha_hora_inicio }}</td>
+            <td>{{ r.res_fecha_hora_fin }}</td>
+            <td>{{ r.res_asignatura || r.res_motivo }}</td>
+            <td><span class="badge">{{ etiquetaEstado(r.res_estado) }}</span></td>
+            <td>{{ r.res_mensaje_respuesta || '—' }}</td>
+            <td>
+              @if (puedeCancelar(r)) {
+                <button type="button" class="btn-peligro" (click)="cancelar(r.res_codigo)">Cancelar</button>
+              } @else {
+                <span class="texto-gris">No cancelable</span>
+              }
+            </td>
+          </tr>
+        } @empty {
+          <tr><td colspan="9">Este usuario aún no tiene reservas registradas.</td></tr>
+        }
+      </tbody>
+    </table>
+  </article>
+</section>

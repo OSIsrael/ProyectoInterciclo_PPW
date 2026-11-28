@@ -1,0 +1,81 @@
+<section class="contenedor">
+  <h2>Gestión y Aprobación de Solicitudes (Administrador)</h2>
+
+  @if (mensajeExito) {
+    <div class="alerta exito">{{ mensajeExito }}</div>
+  }
+  @if (mensajeError) {
+    <div class="alerta error">{{ mensajeError }}</div>
+  }
+
+  <article class="tarjeta">
+    <h3>Solicitudes Pendientes de Aprobación ({{ pendientes.length }})</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Docente</th>
+          <th>Laboratorio</th>
+          <th>Horario</th>
+          <th>Asignatura / Motivo</th>
+          <th>Mensaje de respuesta</th>
+          <th>Decisión</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (r of pendientes; track r.res_codigo) {
+          <tr>
+            <td>{{ r.res_codigo }}</td>
+            <td>{{ r.solicitante_nombre }}</td>
+            <td>{{ r.lab_nombre }}</td>
+            <td>{{ r.res_fecha_hora_inicio }}<br />a {{ r.res_fecha_hora_fin }}</td>
+            <td><strong>{{ r.res_asignatura }}</strong><br /><small>{{ r.res_motivo }}</small></td>
+            <td>
+              <input
+                type="text"
+                [(ngModel)]="mensajesRespuesta[r.res_codigo]"
+                placeholder="Observación opcional..."
+              />
+            </td>
+            <td class="acciones">
+              <button type="button" class="btn-aprobar" (click)="responder(r.res_codigo, 'A')">Aprobar</button>
+              <button type="button" class="btn-rechazar" (click)="responder(r.res_codigo, 'R')">Rechazar</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr><td colspan="7">No hay solicitudes pendientes por revisar.</td></tr>
+        }
+      </tbody>
+    </table>
+  </article>
+
+  <article class="tarjeta mt">
+    <h3>Todas las Reservas del Sistema</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tipo</th>
+          <th>Solicitante</th>
+          <th>Laboratorio / Equipo</th>
+          <th>Inicio - Fin</th>
+          <th>Estado</th>
+          <th>Respuesta</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (r of reservas; track r.res_codigo) {
+          <tr>
+            <td>{{ r.res_codigo }}</td>
+            <td>{{ r.res_tipo === 'L' ? 'Laboratorio' : 'Equipo' }}</td>
+            <td>{{ r.solicitante_nombre }}</td>
+            <td>{{ r.lab_nombre }} {{ r.equ_codigo_inventario ? '(' + r.equ_codigo_inventario + ')' : '' }}</td>
+            <td>{{ r.res_fecha_hora_inicio }} → {{ r.res_fecha_hora_fin }}</td>
+            <td><span class="badge">{{ etiquetaEstado(r.res_estado) }}</span></td>
+            <td>{{ r.res_mensaje_respuesta || '—' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </article>
+</section>
