@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "start": "node servidor.js",
+  "db:seed": "node base_datos/seed.js",
+  "test": "node --test pruebas/*.test.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",

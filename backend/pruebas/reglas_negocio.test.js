@@ -93,7 +93,11 @@ describe('Reglas de Negocio - Horarios, Bloqueos y Reservas (Persona 2)', () => 
   });
 
   after(() => {
-    baseDatos.prepare('DELETE FROM GRL_NOTIFICACIONES WHERE usu_codigo IN (?, ?, ?)').run(adminId, docenteId, estudianteId);
+    baseDatos.prepare(`
+      DELETE FROM GRL_NOTIFICACIONES
+      WHERE usu_codigo IN (?, ?, ?)
+         OR res_codigo IN (SELECT res_codigo FROM GRL_RESERVAS WHERE lab_codigo IN (?, ?))
+    `).run(adminId, docenteId, estudianteId, labDisponibleId, labMantenimientoId);
     baseDatos.prepare('DELETE FROM GRL_RESERVAS WHERE lab_codigo IN (?, ?)').run(labDisponibleId, labMantenimientoId);
     baseDatos.prepare('DELETE FROM GRL_BLOQUEOS WHERE blo_codigo = ?').run(bloqueoId);
     baseDatos.prepare('DELETE FROM GRL_HORARIOS WHERE lab_codigo IN (?, ?)').run(labDisponibleId, labMantenimientoId);
