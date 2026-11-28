@@ -1,8 +1,14 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
+const ruta = require('node:path');
 
+require('dotenv').config({
+    path: ruta.join(__dirname, '.env')
+});
 const baseDatos = require('./base_datos/conexion');
+const autenticacionRutas = require(
+    './rutas/autenticacion_rutas'
+);
 
 //aplicacion express
 const aplicacion = express();
@@ -14,6 +20,9 @@ aplicacion.use(cors({
 }));
 
 aplicacion.use(express.json());
+
+// Rutas de autenticacion
+aplicacion.use('/api/autenticacion', autenticacionRutas);
 
 // Ruta de prueba servidor
 aplicacion.get('/api', (solicitud, respuesta) => {
